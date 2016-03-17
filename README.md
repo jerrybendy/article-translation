@@ -1,4 +1,4 @@
-# CodeIgniter 相关文章翻译项目
+# CodeIgniter 文章翻译项目
 
 ## 目录
 
