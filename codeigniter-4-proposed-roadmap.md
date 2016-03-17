@@ -2,7 +2,11 @@
 
 After much consideration of the community's desires and opinions, and what we feel is best for the future, the CI Council has come to some decisions about the future of your favorite framework. Be warned, there are big changes ahead, but we believe they can be done in a way that not only prepares us for the future, but still feels like CodeIgniter - simple, fast, flexible.
 
+经过慎重考虑社区的愿望和意见后，我们找到了框架最合适的未来，CI 理事会对框架的未来做出了一些决策。预告一下，未来将会有重大变化，但我们相信他们可以在某种程度上，不仅为我们的未来做准备，也会保持 CodeIgniter 的一贯特点 - 简洁、快速和灵活。
+
 Here's a broad overview of what the future holds. Please remember that this is simply the initial plan. Any and all details are subject to change once development is underway.
+
+这篇文章是对未来的一个简单概述。请记住，这仅仅是最初的计划。任何信息都可能会随着开发的进行而发生变化。
 
 ## Core Changes
 
