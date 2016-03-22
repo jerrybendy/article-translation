@@ -12,7 +12,7 @@ Here's a broad overview of what the future holds. Please remember that this is s
 
 The PHP community has changed drastically since the time that CodeIgniter was originally built. Many of the core elements that exist in CodeIgniter do so because it was necessary at the time. When PHP5 came out, nothing in the core changed. That can't work if CodeIgniter is going to maintain its quality and place in the future of PHP frameworks.
 
-从 CodeIgniter 第一版发布以来，PHP 社区发生了巨大变化。CodeIgniter 的许多核心要素在当时是必须的，但当 PHP5 发布后，CI 的核心没有任何变化。如果未来 CI 想要保证其质量和在 PHP 框架中的地位，则必须进行一些改变。
+从 CodeIgniter 第一版发布以来，PHP 社区发生了巨大变化。CodeIgniter 的许多核心要素在当时是必须的，但当 PHP5 发布后，CI 的核心几乎没有任何变化。如果未来 CI 想要保证其质量和在 PHP 框架中的地位，则必须进行一些改变。
 
 This means the system needs a complete rewrite.  It will be developed in a separate repository so they keep a clean separation. We imagine there are numerous chunks of code that will be reused, but the focus is on modern, clean code.
 
@@ -58,11 +58,11 @@ We will be using PHPUnit for our tests like we do currently. This will also mean
 
 As you can tell from the above, this is definitely a BC breaking version. We do think it is the best for the future of the framework and the developers that use it. By making a major change here, we set the base to work with for many years forward. We will attempt to ease the transition where possible, though how much we are able to do that and provide a modern codebase is yet to be seen.
 
-正如上面讲到的那样，这一定是一个和老版本不兼容的版本。我们认为这应该是框架最好的未来。对于这次的重大变化，我们已经做了好几年的基础工作，我们将尽可能的使过渡更平缓，但是对于我们能提供一个怎样的现代化的基础代码仍有待观察。
+正如上面讲到的那样，这一定是一个和老版本不兼容的版本。我们认为这应该是框架最好的未来。对于这次的重大变化，我们已经做了很多年的基础工作，我们将尽可能的使过渡更平滑，但是对于我们能提供一个怎样的现代化的基础代码仍有待观察。
 
 We will do our best to maintain what has made CodeIgniter as popular over the years as it has been. Namely the speed, simplicity, and the "feel".
 
-我们将尽最大努力保持让 CodeIgniter 多年来流行的特性，即快速、简洁和『感觉』。
+我们将尽最大努力保持让 CodeIgniter 多年来流行的特性，即快速、简洁和『优雅』。
 
 ## 开发时间表
 
@@ -133,4 +133,4 @@ The third phase includes fleshing out and working on the optional packages. At t
 
 We are excited by the opportunities ahead for the framework and looking forward to getting started on the framework very soon. We can't wait to see what this enables you to build in the future.
 
-框架迎来了新的机遇使我们很激动，并迫不及待的希望框架迈出第一步。不要在一旁围观了，赶快来构建你的未来吧。
+框架迎来了新的机遇使我们很激动，并迫不及待的希望框架迈出第一步。不要在一旁围观了，赶快来构筑框架的未来吧。
