@@ -68,53 +68,69 @@ We will do our best to maintain what has made CodeIgniter as popular over the ye
 
 Development will be split into three phases, described below.
 
+整个开发过程将分为三个阶段。
+
 The following libraries will be removed from core and treated as optional downloads: Typography, FTP, ZIP, and XML-RPC.
+
+下列类库将从内核删除，改为按需下载：排版类、FTP 类、ZIP 类和 XML-RPC 类。
 
 The Cart, Javascript, Unit_test, and Trackback libraries will be removed.
 
+购物车类、Javascript 类、单元测试类和 Trackback 类将被删除。
+
 We expect to have an alpha version of the core ready in less than a year. After that we would focus on improving the core and developing the rest of the packages to work with it. Exact timelines will vary, of course, depending on all of the things typical of open source projects like the quantity and quality of community contributions, as well as the available time and life events of the core contributors.
+
+我们期望在一年内能完成一个内核基本成型的 Alpha 版本。之后，我们将把重点放在改进内核与开发剩余软件包的工作中。确切的时间表可能会有所不同，因为，与大多数开源项目一样，这取决于社区贡献的数量与质量，以及核心开发者的时间和精力。
 
 ## 第一阶段
 
 The first phase would focus on nailing the essentials in the framework. This would ensure that all of the parts needed to make it work were in place and working well. This would include:
 
-*   Autoloader
-*   Dependency Injection
-*   Logging
-*   Exception Handling
-*   HTTP Request/Response Layers (or Input/Output)
-*   Routing
-*   Controllers
-*   Models
-*   Database Layer
-*   Config
-*   Security
+第一阶段将侧重于抓住框架最重要的部分。这将是框架其他部分的基础。他们包括：
+
+*   自动加载器
+*   依赖注入
+*   日志
+*   异常处理
+*   HTTP 请求/应答层（或输入/输出）
+*   路由
+*   控制器
+*   模型
+*   数据库层
+*   配置
+*   安全
 
 ## 第二阶段
 
 This second phase focuses on providing and refining the existing classes and features that CodeIgniter users know and love. This would include:
 
-*   The helpers
-*   Language/Localization features
-*   Caching
+第二阶段的重点是完善已有的 CodeIgniter 用户熟知与喜爱的类和特性。他们包括：
+
+*   Helper
+*   语言/国际化特性
+*   缓存
 *   Email
-*   Encryption
-*   Form Validation
-*   Image Library
-*   Pagination
-*   Uploader
-*   Sessions
-*   Views
-*   Debugging and Profiling Tools
+*   加密
+*   表单验证
+*   图像处理类库
+*   分页
+*   上传类
+*   Session
+*   视图
+*   调试和分析工具
 
 ## 第三阶段 - 可选类库
 
 The third phase includes fleshing out and working on the optional packages. At this point, the framework can be released and need not wait for these libraries to be brought up to date.
 
+第三阶段将主要用来扩充可选软件包。在这个时间点，框架应该可以发布了，不需要等到所有类库都准备就绪。
+
 *   FTP
 *   XML-RPC
 *   Zip
-*   Typography
-*   Template Parser
+*   排版类
+*   模板解析器
 
 We are excited by the opportunities ahead for the framework and looking forward to getting started on the framework very soon. We can't wait to see what this enables you to build in the future.
+
+框架迎来了新的机遇使我们很激动，并迫不及待的希望框架迈出第一步。不要在一旁围观了，赶快来构建你的未来吧。
