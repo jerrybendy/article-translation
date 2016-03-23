@@ -104,7 +104,7 @@ The first phase would focus on nailing the essentials in the framework. This wou
 
 This second phase focuses on providing and refining the existing classes and features that CodeIgniter users know and love. This would include:
 
-第二阶段的重点是完善已有的 CodeIgniter 用户熟知与喜爱的类和特性。他们包括：
+第二阶段的重点是完善一些 CodeIgniter 用户喜闻乐见的类和特性。他们包括：
 
 *   Helper
 *   语言/国际化特性
