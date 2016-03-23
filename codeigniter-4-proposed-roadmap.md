@@ -12,7 +12,7 @@ Here's a broad overview of what the future holds. Please remember that this is s
 
 The PHP community has changed drastically since the time that CodeIgniter was originally built. Many of the core elements that exist in CodeIgniter do so because it was necessary at the time. When PHP5 came out, nothing in the core changed. That can't work if CodeIgniter is going to maintain its quality and place in the future of PHP frameworks.
 
-从 CodeIgniter 第一版发布以来，PHP 社区发生了巨大变化。CodeIgniter 的许多核心要素在当时是必须的，但当 PHP5 发布后，CI 的核心几乎没有任何变化。如果未来 CI 想要保证其质量和在 PHP 框架中的地位，则必须进行一些改变。
+从 CodeIgniter 第一版发布以来，PHP 社区发生了巨大变化。CodeIgniter 的许多核心要素在当时是必须的，但当 PHP5 发布后，CodeIgniter 的核心几乎没有任何变化。如果未来 CodeIgniter 想要继续保持高水准并巩固其在 PHP 框架中的地位，则必须进行大改变。
 
 This means the system needs a complete rewrite.  It will be developed in a separate repository so they keep a clean separation. We imagine there are numerous chunks of code that will be reused, but the focus is on modern, clean code.
 
