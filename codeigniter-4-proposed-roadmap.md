@@ -24,7 +24,7 @@ We are targeting *PHP 7* since, at the anticipated release date, 5.6 will be in 
 
 The application and system directories will both work with PSR-4 autoloading. CodeIgniter will use our own autoloader, as well as integrate Composer for those times you need it.
 
-application 和 system 目录都将支持 PSR-4 自动加载。CodeIgniter 将使用自己的自动加载机制，并将会整合 Composer。
+application 和 system 目录都将支持 PSR-4 自动加载。CodeIgniter 将使用自己的自动加载器，并将会整合 Composer。
 
 The individual components would be packaged in some way so that they can, for the most part, be used outside of CodeIgniter in your other projects.
 
