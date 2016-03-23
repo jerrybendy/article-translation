@@ -133,4 +133,4 @@ The third phase includes fleshing out and working on the optional packages. At t
 
 We are excited by the opportunities ahead for the framework and looking forward to getting started on the framework very soon. We can't wait to see what this enables you to build in the future.
 
-框架迎来了新的机遇使我们很激动，并迫不及待的希望框架迈出第一步。不要在一旁围观了，赶快来构筑框架的未来吧。
+框架迎来了新的机遇使我们很兴奋，并迫不及待的希望框架为新版迈出第一步。不要在一旁围观了，赶快来构筑框架的未来吧。
