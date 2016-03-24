@@ -37,7 +37,7 @@ CI4的最大的一个变化是输入输出将被改变，在之前的版本，�
 
 上面的说的这些处理起来好像很有科技含量，但事实上其实很简单。每一个控制器已经有一个类的实例作为属性，但是为了简单，你并没有必要去使用它。控制器的输出会被捕获，然后自动被设置为响应的主体。一个简单的Hello World看起来像这样：
 
-```
+```php
 class Home extends \CodeIgniter\Controller
 {
     public function index()
@@ -46,13 +46,14 @@ class Home extends \CodeIgniter\Controller
     }
 }
 ```
+
 一个简单的例子。
 
 在这个例子中，实现了一个基本的请求的响应信息。你还可以创建更复杂的HTTP缓存策略,通过内容协商裁剪部分响应信息来处理将来请求，或者处理更多的东西。
 
 下面是个稍微复杂一点的例子，你会发现代码很容易看明白，并且处理的很简单
 
-```
+```php
 class Home extends \CodeIgniter\Controller
 {
     public function __construct(...$params)
@@ -92,20 +93,3 @@ class Home extends \CodeIgniter\Controller
 在这个例子中，我们做了很简单的三件事。第一，通过将当前的请求地址重定向到Https请求和设置一个严格的安全传输头(Strict-Transport-Security，这种方式已经被很多主流浏览器供应商所支持，在发送请求前通过浏览器自动将Http请求地址转换到Https请求),强制这个页面通过Https请求；第二，我们将通过设置一些Http缓存规则来帮助浏览器识别什么时候缓存的数据是可以重用的，什么时候不可以重用，这意味着能减少Http请求量，减轻服务器负担，增加服务端性能；最后，我们将输出`JSON`数据给用户，保证输出的是正确的内容类型。
 
 希望这篇文章能简要展望一下未来的Codeigniter,并且让人意识到变化不总是令人害怕的，将来还会有更多的文章来讲述框架的概念，更多的文章将会出现在一个相对固定的地方。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
