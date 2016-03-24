@@ -37,7 +37,7 @@ CI4的最大的一个变化是输入输出将被改变，在之前的版本，�
 
 上面的说的这些处理起来好像很有科技含量似的，但事实上其实很简单。控制器已经有一个类的对象多为属性，但是为了简单，你并没有必要去使用它。控制器的输出会被输出类捕获，然后自动被设置为响应的主体。一个简单的Hello World看起来像这样：
 
-`
+```
 class Home extends \CodeIgniter\Controller
 {
     public function index()
@@ -45,7 +45,7 @@ class Home extends \CodeIgniter\Controller
         echo "Hello World!";
     }
 }
-`
+```
 
 
 
