@@ -56,7 +56,7 @@ application 和 system 目录都将支持 PSR-4 自动加载。CodeIgniter 将�
 *   依赖注入
 *   日志
 *   异常处理
-*   HTTP 请求/应答层（或输入/输出）
+*   HTTP 请求/响应层（或输入/输出）
 *   路由
 *   控制器
 *   模型
