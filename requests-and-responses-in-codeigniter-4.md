@@ -51,7 +51,7 @@ class Home extends \CodeIgniter\Controller
 
 在需要的时候，框架为你提供了精确控制响应的能力。你可以创建复杂的 HTTP 缓存策略，并与 IncomingRequest 类一起通过内容协商定制响应内容。
 
-下面是个稍微复杂一点的例子，你会发现代码很容易看明白，并且处理的很简单。
+下面是一个稍微复杂一点的例子，你会发现代码很容易看明白，并且处理的很简单。
 
 ```php
 class Home extends \CodeIgniter\Controller
