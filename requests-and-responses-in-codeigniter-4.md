@@ -93,6 +93,7 @@ class Home extends \CodeIgniter\Controller
 
 希望这篇文章能简要展望一下未来的Codeigniter,并且让人意识到变化不总是令人害怕的，将来还会有更多的文章来讲述框架的概念，更多的文章将会出现在一个相对固定的地方。
 
+原文链接地址：(http://blog.newmythmedia.com/blog/show/2016-03-02_Requests_and_Responses_In_CodeIgniter_4)
 
 
 
