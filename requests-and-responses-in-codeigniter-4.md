@@ -23,7 +23,7 @@ IncomingRequest 类包含了 HTTP 请求和该请求附带的数据，包括：
 *  是否为命令行请求
 *  是否为 HTTPS
 
-如果你对 IncomingRequest 这个类名感到奇怪，或者说 IncomingRequest 是不是可以简单的称为 Request？答案是否定的，已经有另一个包含 GET 和 POST 等变量的更为通用但没有详细 HTTP 请求信息的 Request 类。一个请求通常只做两件事：要么是浏览器客户端发送请求到服务器(连入)，或者是一个发送给外部服务器的请求(连出)。
+如果你对 IncomingRequest 这个类名感到奇怪，或者说 IncomingRequest 是不是可以简单的称为 Request？答案是否定的，已经有另一个包含 GET 和 POST 等变量的更为通用但没有详细 HTTP 请求信息的 Request 类。一个请求通常只做两件事：一个是浏览器客户端发送请求到服务器(连入)，或者是一个发送给外部服务器的请求(连出)。
 
 ### Response 类
 
