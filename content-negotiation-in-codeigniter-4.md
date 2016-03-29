@@ -21,3 +21,58 @@
 是不是必须要使用内容协商呢？可能不一定，它也许是把双刃剑，有些人提议不要使用它，也有些人认为它就像切片面包一样好吃。如果你需要使用内容协商，在Codeigniter中将很简单。
 
 ## 一个简单例子
+
+这里我不会对内容协商作详细的介绍(详细介绍将在文档中),这个例子简单介绍如何决定使用输出语言。
+
+```
+class BaseController extends \CodeIgniter\Controller
+{
+    protected $language;
+
+    public function __construct(...$params)
+    {
+        parent::__construct(...$params);
+
+        $supportedLangs = ['en-US', 'en', 'fr'];
+
+        $this->language = $this->request->negotiate('language', $supportedLangs);
+    }
+}
+```
+
+这个例子中，该站点可以支持英文和法语，我们将支持的语言赋值到`$supportedLangs`数组里，预示着默认语言是美式英语，但也支持普通英文和法文，然后简单调用`$negotiate->language()`函数， 传递参数
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
