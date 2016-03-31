@@ -42,7 +42,7 @@ class BaseController extends \CodeIgniter\Controller
 
 这个例子表示该站点可以支持英文和法语，我们将支持的语言赋值到 `$supportedLangs` 数组里，预示着默认语言是美式英语，但也支持普通英文和法文，然后简单调用 `$negotiate->language()` 函数，传递支持的语言类型，解析时就能够识别正确的头部，按照数组里定义的优先级顺序，返回最匹配的结果。如果两种语言都无法匹配，就会使用数组中定义的第一个参数定义的语言。
 
-内容协商类中的四个协商方法分别为：
+Negotiate 类中的 4 个协商方法分别为：
 
 *  `media()` 不同于通常的 `Accept` 头，他可以用来请求不同版本的 html/text，或者音频支持，图像支持，等等。
 *  `charset()` 不同于 `Accept-Charset` 头，如果没有匹配的话，默认值为 UTF-8
