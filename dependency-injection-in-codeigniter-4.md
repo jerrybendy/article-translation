@@ -1,4 +1,4 @@
-# Dependency Injection in CodeIgniter 4
+# CodeIgniter 4 的依赖注入
 
 I remember reading a forum thread during the time that we were originally asking for community input on the future of the framework. In it, they ridiculed the community for even considering whether or not we would be using Dependency Injection. At the time, I believe the council was pretty set on having it, but we were letting the discussions and suggestions arise naturally within the community. I read another forum thread the other day on a different site that was looking at our features and wondering why we were bothering since it just read like Laravel, __due in large part to the DI, the namespacing, the PSR4 autoloading, etc.__ I guess you just can't please everyone, right?
 
