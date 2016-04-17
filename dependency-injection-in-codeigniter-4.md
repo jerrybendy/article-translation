@@ -1,10 +1,10 @@
 # CodeIgniter 4 的依赖注入
 
-I remember reading a forum thread during the time that we were originally asking for community input on the future of the framework. In it, they ridiculed the community for even considering whether or not we would be using Dependency Injection. At the time, I believe the council was pretty set on having it, but we were letting the discussions and suggestions arise naturally within the community. I read another forum thread the other day on a different site that was looking at our features and wondering why we were bothering since it just read like Laravel, __due in large part to the DI, the namespacing, the PSR4 autoloading, etc.__ I guess you just can't please everyone, right?
+I remember reading a forum thread during the time that we were originally asking for community input on the future of the framework. In it, they ridiculed the community for even considering whether or not we would be using Dependency Injection. At the time, I believe the council was pretty set on having it, but we were letting the discussions and suggestions arise naturally within the community. I read another forum thread the other day on a different site that was looking at our features and wondering why we were bothering since it just read like Laravel, due in large part to the DI, the namespacing, the PSR4 autoloading, etc. I guess you just can't please everyone, right?
 
-当我们从社区中的评论和讨论中去寻求一些对于框架未来发展有帮助的建议时，我记得我读到过这样一个帖子。在帖子中，有些人在嘲笑我们社区里竟然仍在考虑是否会在框架中引入依赖注入机制这个问题。当时，我们委员会已经非常确定将要引入DI机制，但社区论坛中对于这一方面的探讨和议论在我们没有控制的情况下升级并愈演愈烈。而就在另一天，我在一个不同的网站上碰巧看到另一个论坛中关于我们框架的特色的讨论，他们看着我们框架的特点，并想知道为什么我们会纠结于这方面的事情，既然我们的框架只是读起来像Laravel，这很大一部分原因是因为DI，命名空间，以及psr4自动装填等特色，所以，我想，事情总有相对性，你无法取悦每个人。
+当我们在社区中寻求一些对框架未来发展有帮助的建议时，我记得看到过这样一个帖子，在帖子中，一些人嘲笑社区中竟然仍在考虑是否在框架中使用依赖注入机制。当时，理事会已经非常确定将要引入依赖注入机制，但社区中对这方面的讨论和建议却越来越多。而就在另一天，我在一个论坛上看到一个关于 CI 框架特性的讨论，在讨论中他们认为 CI 框架缺乏 Laravel 框架的一些特性，主要是 DI、名字空间和 PSR4 自动加载等特性。
 
-## Why Is DI Important?
+## 为什么 DI 很重要？
 
 Dependency Injection decouples your code from other, specific, classes. When used correctly, it allows you to easily replace dependencies with mock classes during testing, or replace the dependency with a completely different class that handles the task better. In short, it makes the code more resilient to change. It makes it more portable. It's a good thing, without a doubt. If you've spent most of your PHP career using CodeIgniter, you might not have run across Dependency Injection before, so a short example will help clear things up.
 
