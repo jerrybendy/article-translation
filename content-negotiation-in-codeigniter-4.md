@@ -1,5 +1,7 @@
 # CodeIgniter 4 的内容协商
 
+> 原文: [Content Negotiation in CodeIgniter 4](http://blog.newmythmedia.com/blog/show/2016-03-03_Content_Negotiation_in_CodeIgniter_4)
+
 当我关注到 HTTP 层的时候，发现很多 CIer 对内容协商还不是很了解，下面我们一起来探讨一下什么是内容协商，以及如何在即将到来的 CodeIgniter 4 中使用他。
 
 ## 什么是内容协商？
@@ -50,5 +52,3 @@ Negotiate 类中的 4 个协商方法分别为：
 *    **language()** 不同于 `Accept-Language` 请求头。
 
 并不是所有场景都用得着内容协商，但他却是构建高质量 API 的一个有力工具，并且也能够创造性的应用于其他地方。
-
-[原文地址](http://blog.newmythmedia.com/blog/show/2016-03-03_Content_Negotiation_in_CodeIgniter_4)
