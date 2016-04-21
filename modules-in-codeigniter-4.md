@@ -1,5 +1,7 @@
 # Modules in CodeIgniter 4
 
+> 原文: [Modules in CodeIgniter 4](http://blog.newmythmedia.com/blog/show/2016-03-15_Modules_in_CodeIgniter_4)
+
 One of the big hot-buttons that came up during discussion about CodeIgniter 4 features a few months ago was that of HMVC. It seems that most of the comments fell in one of two uses: either for displaying "widgets" on the page, or for simply splitting code into basically modules. In this article, I wanted to look at how modules can work in the upcoming version of the framework.
 
 > NOTE: These examples are all based on pre-release code and the specifics are subject to change at any time.
