@@ -1,5 +1,7 @@
 # Routes in CodeIgniter 4
 
+> 原文: [Routes in CodeIgniter 4](http://blog.newmythmedia.com/blog/show/2016-03-08_Routes_in_CodeIgniter_4)
+
 Routes in CodeIgniter have gone through a pretty big upgrade from version 3 to 4. This article will give a 100-foot view of some of the new changes, and give you something to look forward to.
 
 ## Route Basics
