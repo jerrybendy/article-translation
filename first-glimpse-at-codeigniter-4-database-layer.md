@@ -1,5 +1,7 @@
 # First Glimpse at CodeIgniter 4 Database Layer
 
+原文: [First Glimpse at CodeIgniter 4 Database Layer](http://blog.newmythmedia.com/blog/show/2016-04-01_FirstGlimpseatCodeIgniter4DatabaseLayer)
+
 While work on the database layer is still under heavy construction, I think we're far enough along to be able to give you a glimpse into how it works, how it's the same, and how it's different from what you're accustomed to in previous versions.
 
 First things first: how far along is it? At the moment we can connect to a MySQL database and run both raw queries, and use the Query Builder to run queries. I just wrapped up tests on the existing Query Builder features, I believe, so it should be fairly solid at the moment. What's left? The Query Caching layer needs built, as does the Forge, and the utility methods, as well as getting the drivers in place and in shape.
