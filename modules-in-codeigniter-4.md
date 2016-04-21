@@ -103,7 +103,7 @@ load_helper('Standard\Blog\Helpers\BlogHelper');
 ```php
 echo load_view('Standard\Blog\Views\index', $data);
 ```
-神奇的是，框架会自动在那个命名空间下的CodeIgniter 框架自带目录中去搜索目标文件，所以你不必在路径中包含那些目录名。前面的两个例子也可以这样来写：
+神奇的是，框架会自动在指定搜索的命名空间下的框架本身自带目录中去搜索目标文件，所以你不必在路径中包含那些框架本身自帶的目录名字。前面的两个例子也可以这样来写：
 
 ```php
 load_helper('Standard\Blog\BlogHelper');
