@@ -9,3 +9,4 @@
 - [ ] 5. [CodeIgniter 4 的路由](routes-in-codeigniter-4.md)
 - [ ] 6. [CodeIgniter 4 的模块](modules-in-codeigniter-4.md)
 - [ ] 7. [First Glimpse at CodeIgniter 4 Database Layer](first-glimpse-at-codeigniter-4-database-layer.md)
+- [ ] 8. [CodeIgniter 4 HTTP Client](codeigniter-4-http-client.md)
