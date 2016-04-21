@@ -1,6 +1,6 @@
 # First Glimpse at CodeIgniter 4 Database Layer
 
-原文: [First Glimpse at CodeIgniter 4 Database Layer](http://blog.newmythmedia.com/blog/show/2016-04-01_FirstGlimpseatCodeIgniter4DatabaseLayer)
+> 原文: [First Glimpse at CodeIgniter 4 Database Layer](http://blog.newmythmedia.com/blog/show/2016-04-01_FirstGlimpseatCodeIgniter4DatabaseLayer)
 
 While work on the database layer is still under heavy construction, I think we're far enough along to be able to give you a glimpse into how it works, how it's the same, and how it's different from what you're accustomed to in previous versions.
 
