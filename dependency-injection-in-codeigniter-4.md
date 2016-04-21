@@ -1,5 +1,7 @@
 # CodeIgniter 4 的依赖注入
 
+> 原文: [Dependency Injection in CodeIgniter 4](http://blog.newmythmedia.com/blog/show/2016-03-04_Dependency_Injection_in_CodeIgniter_4)
+
 I remember reading a forum thread during the time that we were originally asking for community input on the future of the framework. In it, they ridiculed the community for even considering whether or not we would be using Dependency Injection. At the time, I believe the council was pretty set on having it, but we were letting the discussions and suggestions arise naturally within the community. I read another forum thread the other day on a different site that was looking at our features and wondering why we were bothering since it just read like Laravel, due in large part to the DI, the namespacing, the PSR4 autoloading, etc. I guess you just can't please everyone, right?
 
 当我们在社区中寻求一些对框架未来发展有帮助的建议时，我记得看到过这样一个帖子，在帖子中，一些人嘲笑社区中竟然仍在考虑是否在框架中使用依赖注入机制。当时，理事会已经非常确定将要引入依赖注入机制，但社区中对这方面的讨论和建议却越来越多。而就在另一天，我在一个论坛上看到一个关于 CI 框架特性的讨论，在讨论中他们认为 CI 框架缺乏 Laravel 框架的一些特性，主要是 DI、名字空间和 PSR4 自动加载等特性。
