@@ -1,5 +1,7 @@
 # CodeIgniter 4 的请求和响应
 
+> 原文: [Requests and Responses In CodeIgniter 4](http://blog.newmythmedia.com/blog/show/2016-03-02_Requests_and_Responses_In_CodeIgniter_4)
+
 CodeIgniter 4 对输入和输出的处理方式做了一个较大的改变。在上一个版本中，包括最新的 V3 版，输入和输出分别是用两个包含相关函数的类来处理的。这样的处理方式背后虽然没有什么高深的技术，但却能简单直接的实现功能。在 V4 版中，我们将更加模块化 HTTP 层，并构建全新的类结构来同时处理 HTTP 的请求和响应。
 
 ## 概览
