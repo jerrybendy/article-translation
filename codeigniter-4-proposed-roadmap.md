@@ -1,6 +1,6 @@
 # CodeIgniter 4 建议路线图
 
-原文: [CodeIgniter 4 Proposed Roadmap](http://forum.codeigniter.com/thread-62615.html)
+`原文: [CodeIgniter 4 Proposed Roadmap](http://forum.codeigniter.com/thread-62615.html)`
 
 我们综合考虑了社区的愿望和意见后，也对什么样的未来对 CI 是最合适的做了一些思考，然后，CI 理事会对框架的未来做出了一些决策。预告一下，未来将会有重大变化，但我们相信他们不仅为我们的未来做准备，也会保持 CodeIgniter 的一贯特点 - 简洁、快速和灵活。
 
