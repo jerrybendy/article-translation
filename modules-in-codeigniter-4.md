@@ -1,30 +1,39 @@
-# Modules in CodeIgniter 4
+# CodeIgniter 4 - 模块结构
 
 > 原文: [Modules in CodeIgniter 4](http://blog.newmythmedia.com/blog/show/2016-03-15_Modules_in_CodeIgniter_4)
 
-One of the big hot-buttons that came up during discussion about CodeIgniter 4 features a few months ago was that of HMVC. It seems that most of the comments fell in one of two uses: either for displaying "widgets" on the page, or for simply splitting code into basically modules. In this article, I wanted to look at how modules can work in the upcoming version of the framework.
+在我们在过去几个月中讨论关于 CodeIgniter 4 功能时， HMVC成为了最大的焦点之一。 总结下来大多数的观点对如何应用HMVC到框架中可以被细分成2类: 
 
-> NOTE: These examples are all based on pre-release code and the specifics are subject to change at any time.
+1. 在页面中用来呈现 “部件”
+2. 把代码封装成基本的模块
 
-## Module/HMVC Support?
+在本篇文章中，我想要从上面提到的第二点的角度出发，探讨那些模块是如何应用在即将发布的新版本中的。
 
-Let me get this out of the way up front: no, CodeIgniter 4 does not support either HMVC, or modules. At least, not in the traditional way that you might think about it. There's no formal definition of module structure, like you might find in a Yii Extension or Drupal plugin. And, there's no hierarchical loading of classes through a nest of different directories.
 
-If that's the case, then how can we support any form of modules? Autoloading and Namespaces.
+> 注意： 我们即将提到的所有例子都是基于预发行版本的，然而可能会在任何时候做出改动。
 
-## Autoloading and Namespaces
 
-The framework now ships with a built-in PSR-4 compliant autoloader, no Composer needed (though you're always free to use that in addition to the built-in one).
 
-Why didn't we just use Composer as the core? We talked about it, and I was, at first, a big proponent for it. However, the more we talked and researched, the more it was clear that it wasn't the right thing for the framework. For one thing, it was having an external script at the core of our framework which left us at their mercy. Also, in different hosting environments, Composer can become problematic to update, especially on tightly-secured shared hosting. Finally, since we didn't have to support all of the flexibility and features that Composer does, we could make it a touch faster by default.
+## 模块/HMVC 支持?
 
-Both the system files and your application files can be namespaced. The system files live under the `CodeIgniter` namespace, while the application directory takes on the `App` namespace by default. You don't have to namespace your controllers and models if you don't want to. It's entirely optional and things will still work in the way that you're accustomed to working.
+在开始前，让我来澄清一下一个观点： CodeIgniter 4 不支持HMVC和模块。 至少，不是你想的那种传统的支持方式。 在 CodeIgniter 4 中没有一个正式的模块结构的定义， 就像你可能在其他框架中看到的一样，诸如 Yii的扩展， Drupal的插件。 并且，在 CodeIgniter 4 中也没有通过不同的目录来完成不同类的优先级加载。
 
-When you combine these two techniques, though, 90% of the work of supporting modules is already done for you. Let's look at a quick example, and then we'll cover the remaining 10% of the solution.
 
-## A Quick Example
+## 自动加载 && 命名空间
 
-Imagine we are creating a Blog module. The first thing to do is to decide on a namespace and then create a home for all of the files to live. We'll use our company name, Standard, and Blog makes sense for the sub-namespace, since that describes the entire "module". While we could put it anywhere, let's create a new directory alongside the `/application` directory to hold all of our company's modules. The folder structure might look something like you're used to in HMVC:
+CodeIgniter 4 自带兼容 PSR-4 的加载器， 所以Composer不是必需的 (但是你随时都可以自由的添加任何你喜欢的加载器)。
+
+有可能你会想知道为什么我们不直接使用Composer作为框架默认的加载器？在开发团队讨论之初，作为核心开发人员的我曾经一度大力支持使用Composer。然而，通过我们越来越多的讨论与研究， 我们也已经越来越清晰的发现Composer对于CodeIgniter 4 来说，并不是一个正确的选择。 其中一个主要的原因是，之前框架的核心部分就曾经使用过一个第三方的脚本，然而每当它改变的时候，框架也必须做出相应的改动来适应它的需求。 还有，在不同的服务器环境中，特别是在为安全问题而实施严格限制的共享主机（shared hosting）的情况下，使用Composer更新时，将非常有可能会产生一系列的问题。 最后，因为Composer 不是框架的核心部分，我们就不必在为让框架支持Composer各种特性而花费大量精力，这让的我们可以更专注于框架本身。
+
+在框架中，不仅框架自带的文件支持命名空间，而且你自己的项目应用程序也可以。框架本身自带的文件使用的命名空间是 `CodeIgniter`， application目录默认使用的是 `App` 命名空间。
+如果你不想改变默认的命名空间，你可以在控制器和模型中完全使用框架自带的命名空间。 使用你自己的命名空间亦或是框架自带的命名空间都不会影响框架本身正常的工作。
+
+当你结合这两种技术时，支持项目模块的工作，框架已经为你完成了90%。 接着，让我们来看一个简单的实例，然后我们会了解那剩下的10%。
+
+
+## 一个简单的实例
+
+设想一下我们现在正为我们的Blog创建一个模块。第一件事我们需要去决定的就是命名空间的名称。然后让我们创建所有即将用到的类。我们会用到Comapny name，Standard， Blog 这些有意义的子命名空间，因为这些命名空间可以很好的描述这个“模块”。接着我们创建了一个和 `/application` 同级的目录并且这个目录将会用来存放所有创建的模块。现在，这个项目文件结构看起来像你已经使用过的HMVC：
 
 ```
 /application
@@ -38,8 +47,7 @@ Imagine we are creating a Blog module. The first thing to do is to decide on a n
         /Views
 /system
 ```
-
-Next, open up `/application/Config/Autoload.php` and let the system know where to find the files. In this example, we'll just create a namespace in the autoloader for the entire company namespace, though you could create additional ones if you want to create one for each module.
+接着打开文件 `/application/Config/Autoload.php` 并且用它来让框架知道如何路由到那些我们刚刚创建的类。 在这个例子中，我们只在加载器中创建了一个命名空间，尽管你可以为每一个模块创建一个命名空间。
 
 ```php
 $psr4 = [
@@ -49,8 +57,7 @@ $psr4 = [
         'Standard'                   => APPPATH.'../standard'
     ];
 ```
-
-Now, as long as we namespace all of our classes, the system can find them and they can be used from anywhere.
+现在，只需要为我们的类创建相对应的命名空间，那么框架就会知道如何去找到这些类并且在框架的任何地方我们都可以使用它们。
 
 ```php
 namespace Standard\Blog;
@@ -70,39 +77,41 @@ class BlogController extends \CodeIgniter\Controller
 }
 ```
 
-Simple stuff.
+真的是非常的方便，不是嘛？
 
-## What About Non-Class Files?
 
-If you were paying attention, then you are probably saying, "Sure, buddy, but what about the non-class files, like helpers, and views? huh?!" And you're right. Straight PHP cannot load non-class-based files from namespaces. So, we built that functionality into CodeIgniter.
+## 那些非类文件框架是如何路由的呢？
 
-The way it works is that it will locate the folder based on the namespace of the file, and then look for it in the normal sub-directory. Some examples will clear this up.
+如果你刚刚仔细看过上面的例子，也许会感到疑惑， “那些没有任何类的文件，就像助手类，视图类，框架是如何路由的呢？！” 正如你所说的，PHP不能使用命名空间规则路由到那些没有任何类的文件。 所以，现在就让我们来创建这样一个功能到CodeIgniter中来解决这个问题。
 
-## Loading Helpers
+这个功能的工作原理是基于通过文件使用的命名空间来定位到我们想要的位置，然后在其子目录中找到它。让我们创建一些例子来帮助你理解这个知识点。
 
-In our example, we might have a `blog_helper` file living at `/standard/Blog/Helpers/BlogHelper.php`. If this were a class, it might have a fully-qualified name like `Standard\Blog\Helpers\BlogHelper.php`. So we pretend that it is a class, and use the `load_helper()` function:
+## 加载助手类
+
+在本例中，我们假设有一个 `blog_helper` 的文件位于 `/standard/Blog/Helpers/BlogHelper.php`。 如果假设这个是类文件，那么它的命名空间看起来就像 `Standard\Blog\Helpers\BlogHelper.php`。 我们可以使用框架自带的 `load_helper()` 方法加载：
 
 ```php
 load_helper('Standard\Blog\Helpers\BlogHelper');
 ```
 
-And, voila!, it can locate the helper and load it.
+哇！就是这么简单。现在你可以找到助手类并且加载它了。
 
-## Loading Views
+## 加载视图类
 
-When using the module pattern, views can be loaded in the exact same way, except using the load_view() function.
+视图类的加载模式与助手类完全相同，可以用load_view()方法进行加载。
 
 ```php
 echo load_view('Standard\Blog\Views\index', $data);
 ```
-
-The system will also look within the traditional CodeIgniter directories within that namespace so you don't have to include it in the name. The above examples could have also bee done like:
+神奇的是，框架会自动在指定搜索的命名空间下的框架本身自带目录中去搜索目标文件，所以你不必在路径中包含那些框架本身自帶的目录名字。前面的两个例子也可以这样来写：
 
 ```php
 load_helper('Standard\Blog\BlogHelper');
 echo load_view('Standard\Blog\index', $data);
 ```
 
+
 ___
 
-While this is not the only way that you can structure things in your application, I hope this gets you excited about the possibilities and flexibility that the framework will be bringing to your applications.
+然而，这不是唯一的项目文件结构你必须在你的项目中遵守的，你完全可以创建属于你自己的结构。 我希望你会为框架带给你项目的灵活性而感到高兴。
+
