@@ -165,9 +165,11 @@ The routes can have a fair amount of customization to them through by passing an
 
 By default, the URI will attempt to be matched up to a controller/method if no route exists for it. This is very convenient and, for those familiar with it, makes it a breeze to find where the code is that you're trying to use. Sometimes, though, you don't want this functionality.
 
-默认情况下，URI会尝试匹配
+默认情况下，即使没有对应的路由不存在时 URI 也总会试图去匹配一个控制器/方法。这在我们熟悉他时会显得很方便，也可以很轻易的找到与 URI 对应的代码。但有时你可能会不想要这个功能。
 
 For example, you might be building an API, and want a single location to serve as documentation for the API. This can be easily handled by turning off the `autoRoute` feature:
+
+例如，你可能在构建一个 API，并且希望在一个单独的入口中访问 API 文档。这可以通过关闭`autoRoute`特性轻松做到。
 
 ```php
 $routes->setAutoRoute(false);
@@ -175,9 +177,14 @@ $routes->setAutoRoute(false);
 
 Now, only routes that have been defined can be served up by your application.
 
+现在，只有被定义过的路由才可以在你的程序中被访问。
+
 ## Groups
+## 分组
 
 Routes can be grouped together under a common prefix, reducing the amount of typing needed and helping to organize the routes.
+
+路由可以通过相同的前缀分组，这可以减少代码量并帮助你更好的组织路由结构。
 
 ```php
 $routes->group('admin', function($routes) {
@@ -188,12 +195,17 @@ $routes->group('admin', function($routes) {
 
 These routes would now all be available under an 'admin' segment in the URI, like:
 
+这些路由现在都可以在 URI 中的`admin`段中被访问，像下面这样：
+
 * example.com/admin/users
 * example.com/admin/blog
 
 ## Environment Groups
+## 根据环境分组
 
 Another form of grouping, `environment()` allows you to restrict some routes to only work in a specific environment. This can be great for building some tools that only work on develoment machines, but not on the production server.
+
+另一种分组的形式，`environment()`允许你限制某些路由仅在特定的环境下可以使用。这在你需要创建一些只打算在开发机器上使用，而并不希望生产环境可用的工具时会很有用。
 
 ```php
 $routes->environment('development', function($routes)
@@ -203,8 +215,11 @@ $routes->environment('development', function($routes)
 ```
 
 ## Redirect Old Routes
+## 重定向旧的路由
 
 If your site has some pages that have been moved, you can assign redirect routes that will send a 302 (Temporary) Redirect status and send the user to the correct page.
+
+如果你的站点有一些页面被移除，你可以给他们分配一个重定向路由，这样页面会发出一个302（临时）重定向状态码并引导你的用户到正确的页面。
 
 ```php
 $routes->addRedirect('users/about', 'users/profile');
@@ -212,13 +227,21 @@ $routes->addRedirect('users/about', 'users/profile');
 
 This will redirect any routes that match `users/about` to the new location at `users/profile`.
 
+这会重定向所有匹配到`users/about`的页面到新的地址`users/profile`。
+
 ## Using Routes In Views
+## 在视图中使用路由
 
 One of the more fragile things when building links within views is having your URIs change, which forces you to edit the links throughout your system. CodeIgniter now provides a couple of different tools to help get around this.
 
+在我们的代码中总会有一个很脆弱的地方，就是如果你在你的视图中写了一个链接，而这个链接对应的地址发生了变化，你就不得不在所有代码中去查找这样的链接并一一改成新的链接地址。CodeIgniter 现在可以提供一些工具来帮助你改善这种情况。
+
 ## Named Routes
+## 命名路由
 
 Anytime you create a route, a name is made for it. By default, this is the same as the "from" portion of the route definition. However, this doesn't help, so you can assign a custom name to the route. This can then be used with the `route_to()` function that is always available to return the correct relative URI.
+
+任何时候当你创建一个路由，它就会有一个名字。默认情况下，路由的名字会和路由定义中的“来源”部分相同。当然这似乎并没什么用，然而你可以给路由分配一个自定义的名字。这时可以使用`route_to()`方法，`route_to()`总是返回正确的相对 URI。
 
 ```php
 // Create the route
@@ -230,6 +253,8 @@ $route->add('auth/login', 'Users::login', ['as' => 'login']);
 
 Named routes used in this way can also accept parameters:
 
+使用这种方式的命名路由同样可以接收参数：
+
 ```php
 // The route is defined as:
 $routes->add('users/(:id)/gallery(:any)', 'Galleries::showUserGallery/$1/$2', ['as' => 'user_gallery');
@@ -240,12 +265,15 @@ $routes->add('users/(:id)/gallery(:any)', 'Galleries::showUserGallery/$1/$2', ['
 ```
 
 ## Reverse Routing
+## 反转路由
 
 For even more fine-grained control, you can use the `route_to()` function to locate the route that corresponds to the controller/method and parameters that you know won't change.
 
+为了更细致的控制，你也可以使用`route_to()`函数直接指定控制器/方法以及参数，当然，前提是你确信这个控制器/方法对应的 URI 以后不会发生变化。
+
 ```php
 // The route is defined as:
-$routes->add('users/(:id)/gallery(:any)', 'Galleries::showUserGallery/$1/$2');
+$routes->add('users/(:id)/gallery/(:any)', 'Galleries::showUserGallery/$1/$2');
 
 // Generate the relative URL to link to user ID 15, gallery 12
 // Generates: /users/15/gallery/12
@@ -253,19 +281,33 @@ $routes->add('users/(:id)/gallery(:any)', 'Galleries::showUserGallery/$1/$2');
 ```
 
 ## Global Options
+## 全局选项
 
 Any of the route creation methods can be passed an array of options that can help further refine the route, doing things like:
+
+所有的创建路由的方法都可以接收一个可选的数组参数，可以帮助我们更好的控制路由：
 
 * assign a namespace to the controllers, reducing typing
 * restrict the route to a specific hostname, or sub-domain
 * offset the matched parameters to ignore one or more (that might have been used for language, version, etc)
 
+* 为控制器分配一个命名空间，以减少重复代码
+* 限制路由到一个指定的域名或子域名
+* 偏移匹配到的参数以忽略一个或多个参数（可以用于语言、版本等等）
+
 ## Need More? Customize it
+## 需要更多？来定制它
 
 If you find that you need something different from the router, it's simple to replace the RouteCollection class with your own, if you want a custom solution. The RouteCollection class is only responsible for reading and parsing the routes, not for doing the actual routing, so everything will still work with your custom solutions
 
+如果你需要让路由实现一些不同的功能，或者自己定义路由的解决方案，你可以简单的把`RouteCollection`类替换成你自己的。`RouteCollection`类仅仅负责读和解析路由，并不去执行实际的路由工作，所以 CodeIgniter 在你自定义的路由解决方案下同样可以工作的很好。
+
 Just be sure to share what you create with the rest of us! :)
+
+记得一定要与我们分享你的创造哟！
 
 ___
 
 Whew! There's the goodness that you get to look forward to. At least, I think I mentioned it all.
+
+嗯！这可能是一些你期望得到的改进。至少，我想我提到了这一切。
