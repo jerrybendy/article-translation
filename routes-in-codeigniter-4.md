@@ -12,7 +12,7 @@ CodeIgniter 的路由在 3 和 4 的版本中有了很大的变更，在本文�
 
 As a refresher, in version 3 routes were specified in a simple array, where each key was the "URI from" and the value of the element was where it should be routed to. It was simple, elegant, worked great, and looked something like this:
 
-先来看一下 CI3 的路由。在 CI3 中路由使用一个简单的数组来指定，数组的键代表原始的URI，值代表最终被路由到的URI。非常简单、优雅的一种方式，并且工作良好，如下：
+先来看一下 CI3 的路由。在 CI3 中路由使用一个简单的数组来指定，数组的键代表原始的 URI，值代表最终被路由到的 URI。非常简单、优雅的一种方式，并且工作良好，如下：
 
 ```php
 $route['join']   = 'home/register';
@@ -56,7 +56,7 @@ $routes->add('blog/category/(:segment)', 'App\Blog\Blog::byCategory/$1');
 
 If the Blog controller lives under `application/Controllers`, great. But if you want to move it into it's own folder, say `application/Blog`, you can update the autoloader config file and everything still works.
 
-如果你的`Blog`控制器是放在`application/Controllers`目录下，很好。但是如果你想把它移动到其它目录下，如`application/Blog`，你只需要更新你的`autoloader`配置，一切将会运行如初。
+如果你的`Blog`控制器是放在`application/Controllers`目录下，很好。但是如果你想把它移动到其它目录下，如`application/Blog`，你只需要更新你的`autoloader`配置，一切都会运行如初。
 
 ## Closures
 ## 闭包
@@ -84,7 +84,7 @@ $routes->add('pages/(:segment)', function($segment)
 
 I'm sure you've noticed a different placeholder than you're used to in the routes: `(:segment)`. This is one of a handful that come stock with CodeIgniter, and is used to replace the `(:any)` that is in v3 and clear up any confusion. Now, the system recognizes the following placeholders:
 
-我确定你一定注意到了我们使用了不同于 CodeIgniter 3 中的路由占位符：`(:segment)`。This is one of a handful that come stock with CodeIgniter, and is used to replace the `(:any)` that is in v3 and clear up any confusion.现在，系统可以识别以下的占位符：
+我确定你一定注意到了我们使用了不同于 CodeIgniter 3 中的路由占位符：`(:segment)`。这算是对旧版中的一项改进被用来代替 v3 版本中的`(:any)`，并且防止混淆。现在，系统可以识别以下的占位符：
 
 * **(:any)** will match all characters from that point to the end of the URI. This may include multiple URI segments.
 * **(:segment)** will match any character except for a forward slash (/) restricting the result to a single segment.
@@ -92,8 +92,8 @@ I'm sure you've noticed a different placeholder than you're used to in the route
 * **(:alpha)** will match any string of alphabetic characters
 * **(alphanum)** will match any string of alphabetic characters or integers, or any combination of the two.
 
-* **(:any)** 会匹配所有字符直到URI的结尾。可能会包含多个URI段。
-* **(:segment)** 会匹配除了正斜线（/）外的所有字符。限制结果只包含一个URI段。
+* **(:any)** 会匹配所有字符直到 URI 的结尾。可能会包含多个 URI 段。
+* **(:segment)** 会匹配除了正斜线（/）外的所有字符。限制结果只包含一个 URI 段。
 * **(:num)** 会匹配所有整数。
 * **(:alpha)** 会匹配所有英文字母。
 * **(:alphanum)** 会匹配所有英文字母或数字，或两者混合。
@@ -108,11 +108,11 @@ $routes->add('users/(:uuid)', 'Users::show/$1');
 ```
 
 ## HTTP Verbs
-## HTTP Verbs（HTTP动作）
+## HTTP Verbs（HTTP动词）
 
 So far, I've been using the generic `add` method to add a new route. Routes added this way will be accessible through any HTTP-verb, whether it's a GET request, POST, PATCH, or even from the command line. It's recommended, though, to restrict the route to only the type of access you need.
 
-到目前为止，我们仅仅使用了普通的`add`方法添加一个新的路由。用这种方式添加的路由可以通过任意的HTTP-verb访问，不管是GET、POST、PATCH甚至使用命令行方式。尽管如此，我们更推荐你限制你的路由只能通过你需要的方式被访问。
+到目前为止，我们仅仅使用了普通的`add`方法添加一个新的路由。用这种方式添加的路由可以通过任意的 HTTP-verb 访问，不管是GET、POST、PATCH甚至使用命令行方式。尽管如此，我们更推荐你限制你的路由只能通过你需要的方式被访问。
 
 ```php
 $routes->get('products', 'Product::feature');
